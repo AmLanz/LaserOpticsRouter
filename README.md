@@ -20,6 +20,10 @@ and transparent path-length, loss and dispersion bookkeeping.
 *A standalone SVG exported by the router. Optic symbols are schematic; beam
 geometry and the grid use millimetres.*
 
+![Corresponding optical-layout draft generated in Autodesk Fusion](LaserOpticsRouter_v1.6.1/LaserOpticsRouter/docs/fusion-draft.png)
+
+*The corresponding Fusion draft, showing the beam envelopes and lightweight planning geometry generated from the routed setup.*
+
 ## What it does
 
 - Edit optical paths visually or with compact commands. Insert useful presets,
