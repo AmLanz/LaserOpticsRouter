@@ -47,35 +47,105 @@ assigned estimates.
 
 ## Installation
 
-1. Open the [latest GitHub release](https://github.com/AmLanz/LaserOpticsRouter/releases/latest)
-   and download `LaserOpticsRouter_v1.6.1.zip`.
-2. Extract the ZIP to a permanent location. Keep the complete inner
-   `LaserOpticsRouter` folder together, including its assets and interface files.
-3. In desktop Fusion, open the **Design** workspace and choose
-   **Utilities → Add-Ins → Scripts and Add-Ins**.
-4. On the **Add-Ins** tab, add the folder containing
+1. Download
+   [`LaserOpticsRouter_v1.6.1.zip`](https://github.com/AmLanz/LaserOpticsRouter/releases/download/v1.6.1/LaserOpticsRouter_v1.6.1.zip).
+
+2. Extract the ZIP. The folder selected in Fusion must directly contain:
+
+   ```text
+   LaserOpticsRouter.manifest
+   LaserOpticsRouter.py
+   palette.html
+   assets\
+   ```
+
+   Do not select the ZIP itself.
+
+3. Store the extracted folder in a permanent location.
+
+   The standard Windows add-in directory is:
+
+   ```text
+   %APPDATA%\Autodesk\Autodesk Fusion\API\AddIns
+   ```
+
+   However, Fusion can also link an add-in stored elsewhere. For example, you
+   can keep versioned folders side by side:
+
+   ```text
+   %APPDATA%\Autodesk\Autodesk Fusion 360\API\Scripts\
+       LaserOpticsRouter_v1.5.0\
+       LaserOpticsRouter_v1.6.0\
+       LaserOpticsRouter_v1.6.1\
+   ```
+
+   This makes it easy to retain a known working version while testing an update.
+
+4. In Fusion, press **Shift+S** to open **Scripts and Add-Ins**. The same dialog
+   is available from:
+
+   **Utilities → Add-Ins → Scripts and Add-Ins**
+
+5. Open the **Add-Ins** tab and click the **+** button. Choose
+   **Script or add-in from device**, then select the extracted folder containing
    `LaserOpticsRouter.manifest`.
-5. Select **LaserOpticsRouter → Run**. Optionally enable **Run on Startup** to
-   register the command whenever Fusion starts.
 
-For new setups, use a **Hybrid Design** document. Existing Part or Assembly
-documents show **Switch to Hybrid & build**, because a generated route contains
-multiple internal components. This explicit action changes the document intent
-inside the build transaction. Draft editing and preview do not change it.
+6. Select **LaserOpticsRouter** in the list and click **Run**.
 
-### Updating
+7. Optionally enable **Run on Startup** when you have settled on the version you
+   want to use.
 
-Save the Fusion design, stop the add-in, and replace the **entire contents** of
-the registered `LaserOpticsRouter` folder with the new release. Retain the
-folder's name and location, restart Fusion, and check the version badge.
+### Finding the installation directory
 
-See the [changelog](LaserOpticsRouter_v1.6.1/LaserOpticsRouter/CHANGELOG.md)
-for release information.
+If scripts or add-ins are already installed but you do not know where Fusion
+stores them:
 
-LaserOpticsRouter requires desktop Fusion on Windows or macOS. Fusion supplies
-Python and the embedded browser; no pip or npm installation is required. The
-add-in has no external service dependency. Linked CAD components use Fusion's
-own data workflow.
+1. Press **Shift+S**.
+2. Select any listed script or add-in.
+3. Right-click it and choose **Open File Location**.
+
+This opens its directory in the system file manager and provides a convenient
+starting point for locating Fusion's `API`, `Scripts` or `AddIns` directories.
+
+### Keeping several versions
+
+Several LaserOpticsRouter versions may be stored and linked side by side. Give
+each extracted folder a versioned name such as:
+
+```text
+LaserOpticsRouter_v1.6.0
+LaserOpticsRouter_v1.6.1
+```
+
+Only run **one LaserOpticsRouter version at a time**. The versions use the same
+Fusion command and palette identifiers, so running two simultaneously can
+replace interface handlers or remove each other's controls.
+
+When switching versions:
+
+1. Press **Shift+S**.
+2. Select the running LaserOpticsRouter version and click **Stop**.
+3. Select the required version and click **Run**.
+4. Enable **Run on Startup** for only the preferred version.
+
+Linked versions can be removed from Fusion's list without deleting their files.
+Select the entry and use **Unlink**. The version folder remains on disk and can
+be linked again later.
+
+### Updating in place
+
+To replace an existing installation instead:
+
+1. Save the Fusion design.
+2. Stop LaserOpticsRouter through **Shift+S**.
+3. Open its folder using **Open File Location**.
+4. Replace the complete folder contents with the contents of the new release's
+   inner `LaserOpticsRouter` folder.
+5. Restart Fusion and check the version badge before continuing work.
+
+Do not update only `LaserOpticsRouter.py`. The interface, schematic renderer,
+documentation and backend modules are separate files and must remain from the
+same release.
 
 ## A first route
 
