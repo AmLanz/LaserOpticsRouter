@@ -1,6 +1,6 @@
 <img src="LaserOpticsRouter_v1.6.1/LaserOpticsRouter/assets/vogel-orange.svg" width="72" alt="Amon P. Lanz bird logo">
 
-# LaserOpticsRouter
+# LaserOpticsRouter (Work in progress)
 
 **Sketch an optical setup. Check its path. Place the hardware when ready.**
 
