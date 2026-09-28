@@ -1,0 +1,12 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "addin",
+  "author": "Amon P. Lanz",
+  "description": {
+    "": "LaserOpticsRouter \u2014 visual optical layout, configurable CAD optics, fast preview and saved beam endpoints."
+  },
+  "version": "1.6.1",
+  "runOnStartup": false,
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}
