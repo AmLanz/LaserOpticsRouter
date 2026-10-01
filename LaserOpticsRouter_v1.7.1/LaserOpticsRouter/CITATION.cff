@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If LaserOpticsRouter contributes to your work, a software citation is appreciated. Citation is optional."
+type: software
+title: "LaserOpticsRouter"
+authors:
+  - family-names: "Lanz"
+    given-names: "Amon P."
+version: "1.7.1"
+date-released: 2026-10-01
+license: Apache-2.0
+repository-code: "https://github.com/AmLanz/LaserOpticsRouter"
+url: "https://github.com/AmLanz/LaserOpticsRouter"
+abstract: "Independent Autodesk Fusion add-in for sketching optical setups, placing CAD optics, previewing geometric and simplified Gaussian beam envelopes, and recording manual reference budgets."
+keywords:
+  - optical layout
+  - laser
+  - CAD
+  - Autodesk Fusion

@@ -1,0 +1,418 @@
+[
+  {
+    "name": "Folded focus",
+    "commands": "p100 l50 p25 r90 p75",
+    "source": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "azimuth": 0,
+      "elevation": 0,
+      "diameter_mm": 5,
+      "half_angle_mrad": 0,
+      "model": "geometric",
+      "wavelength_nm": 800,
+      "m2": 1
+    },
+    "expected_end": {
+      "position": [
+        125.0,
+        75.0,
+        0.0
+      ],
+      "direction": [
+        6.123233995736766e-17,
+        1.0,
+        0.0
+      ],
+      "azimuth": 90.0,
+      "elevation": 0.0,
+      "azimuth_defined": true,
+      "diameter_mm": 5.0,
+      "half_angle_mrad": 49.958395721942765,
+      "status": "diverging",
+      "path_mm": 200.0,
+      "model": "geometric"
+    }
+  },
+  {
+    "name": "3D return",
+    "commands": "p50 r90v30 p100 r-90v-30 p100",
+    "source": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "azimuth": 0,
+      "elevation": 0,
+      "diameter_mm": 5,
+      "half_angle_mrad": 0,
+      "model": "geometric",
+      "wavelength_nm": 800,
+      "m2": 1
+    },
+    "expected_end": {
+      "position": [
+        150.0,
+        86.60254037844388,
+        49.99999999999999
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "azimuth": 0.0,
+      "elevation": 0.0,
+      "azimuth_defined": true,
+      "diameter_mm": 5.0,
+      "half_angle_mrad": 0.0,
+      "status": "near collimated",
+      "path_mm": 250.0,
+      "model": "geometric"
+    }
+  },
+  {
+    "name": "Beam splitter",
+    "commands": "p50 l-50 p20 bs30 p100",
+    "source": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "azimuth": 0,
+      "elevation": 0,
+      "diameter_mm": 5,
+      "half_angle_mrad": 0,
+      "model": "geometric",
+      "wavelength_nm": 800,
+      "m2": 1
+    },
+    "expected_end": {
+      "position": [
+        170.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "azimuth": 0.0,
+      "elevation": 0.0,
+      "azimuth_defined": true,
+      "diameter_mm": 17.0,
+      "half_angle_mrad": 49.958395721942765,
+      "status": "diverging",
+      "path_mm": 170.0,
+      "model": "geometric"
+    }
+  },
+  {
+    "name": "OAP relay",
+    "commands": "p50 r90f50 p100 _r-90f50 p100",
+    "source": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "azimuth": 0,
+      "elevation": 0,
+      "diameter_mm": 5,
+      "half_angle_mrad": 0,
+      "model": "geometric",
+      "wavelength_nm": 800,
+      "m2": 1
+    },
+    "expected_end": {
+      "position": [
+        150.0,
+        100.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "azimuth": 0.0,
+      "elevation": 0.0,
+      "azimuth_defined": true,
+      "diameter_mm": 5.0,
+      "half_angle_mrad": -0.0,
+      "status": "near collimated",
+      "path_mm": 250.0,
+      "model": "geometric"
+    }
+  },
+  {
+    "name": "Wollaston horizontal",
+    "commands": "p20 wp20h p100",
+    "source": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "azimuth": 0,
+      "elevation": 0,
+      "diameter_mm": 5,
+      "half_angle_mrad": 0,
+      "model": "geometric",
+      "wavelength_nm": 800,
+      "m2": 1
+    },
+    "expected_end": {
+      "position": [
+        118.4807753012208,
+        -17.36481776669304,
+        0.0
+      ],
+      "direction": [
+        0.984807753012208,
+        -0.1736481776669304,
+        0.0
+      ],
+      "azimuth": 350.0,
+      "elevation": 0.0,
+      "azimuth_defined": true,
+      "diameter_mm": 5.0,
+      "half_angle_mrad": 0.0,
+      "status": "near collimated",
+      "path_mm": 120.0,
+      "model": "geometric",
+      "optical_path_mm": 120.0,
+      "loss_pct": 51.0,
+      "gdd_fs2": 0.0
+    },
+    "expected_secondary_ends": [
+      {
+        "position": [
+          118.4807753012208,
+          17.364817766693033,
+          0.0
+        ],
+        "direction": [
+          0.984807753012208,
+          0.17364817766693033,
+          0.0
+        ],
+        "azimuth": 10.0,
+        "elevation": 0.0,
+        "azimuth_defined": true,
+        "diameter_mm": 5.0,
+        "half_angle_mrad": 0.0,
+        "status": "near collimated",
+        "path_mm": 120.0,
+        "model": "geometric",
+        "optical_path_mm": 120.0,
+        "loss_pct": 51.0,
+        "gdd_fs2": 0.0
+      }
+    ]
+  },
+  {
+    "name": "Rochon vertical",
+    "commands": "p20 rp10.6v p100",
+    "source": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "azimuth": 0,
+      "elevation": 0,
+      "diameter_mm": 5,
+      "half_angle_mrad": 0,
+      "model": "geometric",
+      "wavelength_nm": 800,
+      "m2": 1
+    },
+    "expected_end": {
+      "position": [
+        120.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "azimuth": 0.0,
+      "elevation": 0.0,
+      "azimuth_defined": true,
+      "diameter_mm": 5.0,
+      "half_angle_mrad": 0.0,
+      "status": "near collimated",
+      "path_mm": 120.0,
+      "model": "geometric",
+      "optical_path_mm": 120.0,
+      "loss_pct": 51.0,
+      "gdd_fs2": 0.0
+    },
+    "expected_secondary_ends": [
+      {
+        "position": [
+          118.29353491495543,
+          0.0,
+          18.39513506127202
+        ],
+        "direction": [
+          0.9829353491495543,
+          0.0,
+          0.1839513506127202
+        ],
+        "azimuth": 0.0,
+        "elevation": 10.600000000000001,
+        "azimuth_defined": true,
+        "diameter_mm": 5.0,
+        "half_angle_mrad": 0.0,
+        "status": "near collimated",
+        "path_mm": 120.0,
+        "model": "geometric",
+        "optical_path_mm": 120.0,
+        "loss_pct": 51.0,
+        "gdd_fs2": 0.0
+      }
+    ]
+  },
+  {
+    "name": "Displace and recombine",
+    "commands": "p20 bd4h p50 _bd4h p50",
+    "source": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "azimuth": 0,
+      "elevation": 0,
+      "diameter_mm": 5,
+      "half_angle_mrad": 0,
+      "model": "geometric",
+      "wavelength_nm": 800,
+      "m2": 1
+    },
+    "expected_end": {
+      "position": [
+        120.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "azimuth": 0.0,
+      "elevation": 0.0,
+      "azimuth_defined": true,
+      "diameter_mm": 5.0,
+      "half_angle_mrad": 0.0,
+      "status": "near collimated",
+      "path_mm": 120.0,
+      "model": "geometric",
+      "optical_path_mm": 120.0,
+      "loss_pct": 51.49,
+      "gdd_fs2": 0.0
+    },
+    "expected_secondary_ends": [
+      {
+        "position": [
+          120.0,
+          0.0,
+          0.0
+        ],
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "azimuth": 0.0,
+        "elevation": 0.0,
+        "azimuth_defined": true,
+        "diameter_mm": 5.0,
+        "half_angle_mrad": 0.0,
+        "status": "near collimated",
+        "path_mm": 120.0,
+        "model": "geometric",
+        "optical_path_mm": 120.0,
+        "loss_pct": 51.49,
+        "gdd_fs2": 0.0
+      }
+    ]
+  },
+  {
+    "name": "Reversed vertical displacer",
+    "commands": "bd4v- p50 _bd4v- p50",
+    "source": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "azimuth": 0,
+      "elevation": 0,
+      "diameter_mm": 5,
+      "half_angle_mrad": 0,
+      "model": "geometric",
+      "wavelength_nm": 800,
+      "m2": 1
+    },
+    "expected_end": {
+      "position": [
+        100.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "azimuth": 0.0,
+      "elevation": 0.0,
+      "azimuth_defined": true,
+      "diameter_mm": 5.0,
+      "half_angle_mrad": 0.0,
+      "status": "near collimated",
+      "path_mm": 100.0,
+      "model": "geometric",
+      "optical_path_mm": 100.0,
+      "loss_pct": 51.49,
+      "gdd_fs2": 0.0
+    },
+    "expected_secondary_ends": [
+      {
+        "position": [
+          100.0,
+          0.0,
+          0.0
+        ],
+        "direction": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "azimuth": 0.0,
+        "elevation": 0.0,
+        "azimuth_defined": true,
+        "diameter_mm": 5.0,
+        "half_angle_mrad": 0.0,
+        "status": "near collimated",
+        "path_mm": 100.0,
+        "model": "geometric",
+        "optical_path_mm": 100.0,
+        "loss_pct": 51.49,
+        "gdd_fs2": 0.0
+      }
+    ]
+  }
+]
