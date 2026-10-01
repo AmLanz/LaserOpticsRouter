@@ -23,7 +23,7 @@ easier to sketch, communicate and arrange mechanically.
 
 **Version 1.7.1 · Apache-2.0 · Amon P. Lanz**
 
-[Download v1.7.1 (ZIP)](LaserOpticsRouter_v1.7.1.zip?raw=true) ·
+[Download latest release](https://github.com/AmLanz/LaserOpticsRouter/releases/latest) ·
 [Browse the add-in source](LaserOpticsRouter_v1.7.1/LaserOpticsRouter) ·
 [Report an issue](https://github.com/AmLanz/LaserOpticsRouter/issues)
 
